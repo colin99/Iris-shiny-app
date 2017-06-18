@@ -36,6 +36,7 @@ shinyServer(function(input, output) {
     plot(irisSubset$Sepal.Width, irisSubset$Sepal.Length, ylim = c(3, 9), xlim = c(2,5), xlab = "Sepal Width (cm)", ylab = "Sepal Length (cm)", col ="red")
     abline(model, col = "blue", lwd = 2)
     points(targetSepalWidth, modelPrediction(), col="green", pch = 16, cex =2)
+    legend("bottomright", c("Data Points", "Linear Model", "User Requested Point"),title = "Legend",  text.col=c("red","blue","green"), title.col = "black")
   })
   
 })
